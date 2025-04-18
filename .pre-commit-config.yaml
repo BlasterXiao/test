@@ -59,3 +59,9 @@ repos:
         language: rust
         files: \.rs$
         pass_filenames: false
+      - id: git-cliff
+        name: Generate CHANGELOG.md
+        description: Automatically generate CHANGELOG.md
+        entry: bash -c 'git cliff --output CHANGELOG.md && git add CHANGELOG.md'
+        language: system
+        pass_filenames: false
